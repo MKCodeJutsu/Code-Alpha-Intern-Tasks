@@ -1,0 +1,246 @@
+/* General Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #1c1c2e, #4e4e63);
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  display: flex;
+}
+
+/* Music Library */
+.music-library {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  background: #252526fb;
+  color: white;
+  width: 250px;
+  padding: 20px;
+  height: 100vh;
+  border-right: 1px solid #444;
+}
+
+.sidebar h2 {
+  
+  margin: 0 0 20px;
+}
+
+/* Playlist */
+#playlist {
+  list-style: none;
+  padding: 0;
+}
+
+#playlist li {
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#playlist li:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Player */
+.player {
+  position: relative;
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  overflow: hidden; /* Ensures no overflow from the blur */
+}
+
+/* Blur Background */
+.player::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: var(--background-image);
+  background-size: cover;
+  background-position: center;
+  filter: blur(15px);
+  z-index: 0; /* Send it to the back */
+}
+
+/* Album Cover */
+.album-cover {
+  position: relative;
+  /*Positioningforstacking*/z-index: 1;
+  /*Bringitabovetheblur*/width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.album-cover:hover {
+  transform: scale(1.05);
+}
+
+/* Progress Container */
+.progress-container {
+  width: 60%;
+  position: relative;
+  margin: 15px 0;
+}
+
+/* Progress Bar */
+#progress-bar {
+  width: 100%;
+  cursor: pointer;
+  appearance: none;
+  background: rgba(255, 255, 255, 0.2);
+  height: 8px;
+  border-radius: 5px;
+  outline: none;
+}
+#progress-bar:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Progress Bar Thumb */
+#progress-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s, transform 0.2s;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+#progress-bar::-webkit-slider-thumb:hover{
+  background: #4caf50;
+}
+
+#progress-bar::-moz-range-thumb,
+#progress-bar::-ms-thumb {
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border: 2px solid #4caf50;
+  border-radius: 10%;
+  cursor: pointer;
+  -webkit-border-radius: 10%;
+  -moz-border-radius: 10%;
+  -ms-border-radius: 10%;
+  -o-border-radius: 10%;
+}
+
+/* Track Time */
+.track-time {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-size: 14px;
+  margin-top: 10px; /* Add some margin */
+  z-index: 1;
+}
+
+/* Controls */
+.controls {
+  position: relative;
+  z-index: 1; /* Bring controls above the blur */
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-left: 200px;
+}
+
+/* Control Buttons */
+.control-btn {
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: 0.3s, transform 0.2s;
+  font-size: 20px;
+
+}
+
+.control-btn:hover {
+  background: #9792922d;
+
+  color: #4caf50;
+}
+
+.track-title {
+  margin-bottom: 10px;
+  color: white;
+  z-index: 1;
+}
+
+
+
+
+.volume-control {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  color: white;
+}
+#volume-slider {
+  width: 25%;
+  cursor: pointer;
+  appearance: none;
+  background: rgba(255, 255, 255, 0.2);
+  height: 8px;
+  border-radius: 5px;
+  outline: none;
+}
+#volume-slider:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+#volume-slider::-moz-range-track {
+  height: 8px;
+  border-radius: 5px;
+}
+
+#volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+#volume-slider::-webkit-slider-thumb:hover {
+  background: #4caf50;
+}

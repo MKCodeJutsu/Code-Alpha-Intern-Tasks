@@ -1,0 +1,143 @@
+#projects {
+  padding: 20px 20px;
+  color: #fff;
+  text-align: center;
+  background: transparent;
+}
+
+.section-title {
+  font-size: 3rem;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #f0f0f0;
+  font-size: 2.5em;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+.projects-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.project-card {
+  position: relative;
+  width: 300px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.project-card::before {
+  content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, rgba(0, 0, 255, 0.527), rgba(0, 255, 255, 0.603), #f39d12a6, rgba(0, 0, 255, 0.527), rgba(0, 255, 255, 0.61));
+    z-index: -1;
+    background-size: 400% 400%;
+    animation: animate-border 10s ease infinite;
+    border-radius: 15px;
+    padding: 4px; /* Match this to the border thickness */
+}
+@keyframes animate-border {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+.project-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: opacity 0.4s ease;
+}
+
+.project-card:hover img {
+  opacity: 0.8;
+}
+
+.project-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.project-info h3 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.project-info p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 20px;
+}
+
+.project-info .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  background: linear-gradient(to right, rgba(0, 0, 255, 0.384), rgba(0, 255, 255, 0.459));
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.project-info .btn:hover {
+  background: rgba(0, 123, 255, 0.596);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+}
+
+
+/* Responsive styling for mobile devices */
+@media (max-width: 768px) {
+  .project-card {
+      width: calc(100% - 40px); /* Full width minus padding */
+      max-width: none; /* Remove max-width constraint */
+  }
+}
+
+@media (max-width: 480px) {
+  #projects {
+      padding: 60px 10px; /* Adjust padding for smaller screens */
+    }
+    #projects h2 {
+      font-size: 2.4rem; /* Adjust font size for smaller screens */
+    }
+  
+  .project-card {
+      width: calc(100% - 20px); /* Ensure full width on very small screens */
+      margin: 10px auto; /* Adjust margin for better spacing */
+  }
+
+  .project-card h3, .project-card p {
+      font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+  .project-link {
+      padding: 8px 16px; /* Adjust padding for smaller screens */
+  }
+}

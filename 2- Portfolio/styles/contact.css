@@ -1,0 +1,187 @@
+/* Contact Section Styling */
+#contact {
+  padding: 100px 0;
+  background: rgba(0, 0, 0, 0); /* Transparent dark background */
+  color: #fff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.3), 0 0 50px rgba(255, 105, 180, 0.3);
+  backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 1;
+  transition: 0.6s;
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -ms-transition: 0.6s;
+  -o-transition: 0.6s;
+  scale: 0.9;
+}
+.contact-container:hover {
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.6), 0 0 50px rgba(255, 105, 180, 0.6);
+  scale: 1;
+}
+
+#contact h2 {
+  font-size: 2.8em;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #00f, #f39c12);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#contact p {
+  font-size: 1.1em;
+  margin-bottom: 40px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Contact Form Styling */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.541); /* Transparent inputs */
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1.1em;
+  outline: none;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+input:focus, textarea:focus {
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.8), 0 0 50px rgba(255, 105, 180, 0.8);
+}
+
+textarea {
+  resize: none;
+}
+
+/* Button Styling */
+
+.btn-spaceship {
+  position: relative;
+  display: inline-block;
+  padding: 15px 40px;
+  font-size: 1.2em;
+  color: #fff;
+  border: 2px solid rgba(0, 255, 255, 0.377);
+  border-radius: 30px;
+  background-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+  transition: color 0.4s, border-color 0.4s;
+  margin-left: 25px;
+}
+
+/* Before Hover: Pulsating Border Effect */
+.btn-spaceship:before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(120deg, #00f, #f39c12, #0ff, #f105e0);
+  background-size: 400%;
+  z-index: -1;
+  transition: transform 0.6s ease;
+  border-radius: 50%;
+  opacity: 0.4;
+}
+
+/* Hover Effect: Enhanced Glow and Color Shift */
+.btn-spaceship:hover {
+  color: #f39c12;
+  border-color: #f39d12b0;
+}
+
+/* Hover Animation: Pulsating and Shifting Effect */
+.btn-spaceship:hover:before {
+  transform: scale(1.5);
+  background-position: 100%;
+  opacity: 0.7;
+}
+
+.btn-spaceship:after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3), rgba(0,0,255,0) 70%);
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.4s ease-in-out;
+}
+
+.btn-spaceship:hover:after {
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
+
+
+
+
+
+/* Particle Effects */
+.particle {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: particles 10s infinite linear;
+}
+
+.particle:nth-child(1) {
+  width: 15px;
+  height: 15px;
+  left: 20%;
+  top: 30%;
+  animation-delay: -1s;
+}
+
+.particle:nth-child(2) {
+  width: 20px;
+  height: 20px;
+  left: 80%;
+  top: 40%;
+  animation-delay: -3s;
+}
+
+.particle:nth-child(3) {
+  width: 25px;
+  height: 25px;
+  left: 50%;
+  top: 70%;
+  animation-delay: -5s;
+}
+
+/* Add more particles for enhanced effect */

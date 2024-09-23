@@ -1,0 +1,145 @@
+/* Basic reset and styling */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', sans-serif;
+  scroll-behavior: smooth;  
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: url('/assets/images/space-background.jpg') no-repeat center center fixed;
+  background-size: cover; /* Ensures the image covers the entire viewport */
+  background-position: center; /* Keeps the image centered */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-attachment: fixed; /* Keeps the background fixed during scrolling */
+}
+
+#container {
+
+}
+
+/* Ensure responsiveness for different screen sizes */
+@media (max-width: 768px) {
+  body {
+      background-size: cover;
+      background-position: center;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+      background-size: cover;
+      background-position: center;
+  }
+}
+
+
+
+
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+}
+
+#constellation-nav {
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 1.5rem;
+}
+
+#constellation-nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+#constellation-nav a:hover {
+  color: #f39c12; /* Glow color */
+}
+
+#constellation-nav a::before {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #f39c12; /* Glow color */
+  transition: width 0.3s ease;
+  box-shadow: 0 0 8px #f39c12; /* Glowing effect */
+}
+
+#constellation-nav a:hover::before {
+  width: 100%;
+  left: 0;
+}
+#constellation-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, #00f, #0ff);
+  transition: width 0.3s ease;
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+}
+
+#constellation-nav a:hover::after {
+  width: 100%;
+}
+
+
+
+
+/* Shooting stars animation */
+@keyframes shooting-star {
+  0% {
+      transform: translateX(-100%) translateY(-100%);
+      opacity: 1;
+  }
+  100% {
+      transform: translateX(100%) translateY(100%);
+      opacity: 0;
+  }
+}
+
+.shooting-star {
+  position: absolute;
+  width: 2px;
+  height: 100px;
+  background: linear-gradient(to right,  #00f, #0ff);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+  transition: width 0.3s ease;
+  opacity: 0.8;
+  animation: shooting-star linear infinite;
+  transform: rotate(45deg);
+}
+
+
+
+
+/* Position multiple shooting stars */
+
+
+
+.mt {
+  margin-top: 1rem;
+}
+.mtt {
+  margin-top: 2rem;
+}
+.mttt{
+  margin-top: 3rem;
+}
+
+
+
+

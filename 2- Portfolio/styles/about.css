@@ -1,0 +1,136 @@
+/* General styles for About Me section */
+#about {
+  padding: 85px 20px 0px 20px ; /* Ensure enough padding to separate it from other sections */
+  background: transparent; /* No background for a clean look */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  color: #ffffff;
+}
+#about h2 {
+  letter-spacing: 2px;
+  color: #f0f0f0;
+  font-size: 1.5em;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px; /* Space between the text and image */
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+  max-width: 765px;
+  color: #fff;
+  font-size: 1.2em;
+  line-height: 1.8;
+}
+
+.about-text h3 {
+  font-size: 2.5em;
+  color: #ffffff;
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+.about-text p {
+  background: rgba(0, 0, 0, 0.37);
+  /*Semi-transparentbackgroundforcontrast*/padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  width: 800px;
+  z-index: 0;
+  transition: 0.6s;
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -ms-transition: 0.6s;
+  -o-transition: 0.6s;
+  animation: animate-border 10s ease infinite;
+
+}
+.about-text p:hover {
+  transform: scale(1.1);
+  /*Increasethescaleslightly*/box-shadow: 0 0 60px rgba(0, 255, 255, 1), 0 0 100px rgba(0, 0, 0, 0.9);
+  background: #f39c12;
+
+}
+@keyframes animate-border {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+/* About Image Styling */
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.about-image img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 4px solid rgba(0, 255, 255, 0.8);
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.7), 0 0 80px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  object-fit: cover;
+  z-index: 5px;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0, 255, 255, 1), 0 0 100px rgba(0, 0, 0, 0.9);
+}
+
+/* Responsive styling */
+@media (max-width: 1200px) {
+  .about-container {
+    max-width: 90%;
+  }
+}
+@media (max-width: 320px) {
+  .about-text h2 {
+    font-size: 1.5em;
+  }
+
+  .about-text p {
+    font-size: 0.9em;
+  }
+
+  .about-image img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 240px) {
+  .about-text h2 {
+    font-size: 1.2em;
+  }
+
+  .about-text p {
+    font-size: 0.8em;
+  }
+
+  .about-image img {
+    width: 80px;
+    height: 80px;
+  }
+}

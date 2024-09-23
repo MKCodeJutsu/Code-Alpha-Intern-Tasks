@@ -1,0 +1,262 @@
+/* Base Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    background: #000;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #333;
+}
+
+.header .logo {
+    font-size: 1.8em;
+    color: #fff;
+}
+
+.header nav {
+    display: flex;
+    gap: 20px;
+}
+
+.header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+.header nav a:hover {
+    color: #f39c12;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: url('space-background.jpg') no-repeat center center/cover;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.2em;
+}
+
+/* About Section */
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.about .profile-img {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+}
+
+.about .profile-img img {
+    width: 100%;
+    height: auto;
+}
+
+.about .profile-img:hover img {
+    transform: scale(1.1);
+}
+
+.about p {
+    font-size: 1em;
+    max-width: 800px;
+    text-align: center;
+}
+
+/* Projects Section */
+.projects {
+    padding: 50px 20px;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #00f;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    transition: border-color 0.3s ease;
+}
+
+.project-card:hover {
+    border-color: #f39c12;
+}
+
+.project-card h3 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.project-card p {
+    font-size: 1em;
+}
+
+/* Contact Section */
+.contact {
+    padding: 50px 20px;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: auto;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 1em;
+    resize: vertical;
+}
+
+.contact button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    background: #00f;
+    color: #fff;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact button:hover {
+    background: #f39c12;
+}
+
+/* Footer */
+.footer {
+    padding: 30px 20px;
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+
+.footer .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 15px;
+}
+
+.footer .social-links .footer-link {
+    color: #fff;
+    font-size: 2em;
+    transition: color 0.3s ease;
+}
+
+.footer .social-links .footer-link:hover {
+    color: #f39c12;
+}
+
+.footer .footer-text {
+    font-size: 0.9em;
+    color: #ccc;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.footer .footer-text:hover {
+    opacity: 1;
+}
+
+/* Responsive Design */
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: center;
+    }
+
+    .header nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .about {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .about p {
+        font-size: 0.9em;
+    }
+
+    .project-card {
+        margin: 10px 0;
+    }
+
+    .contact form {
+        width: 100%;
+    }
+
+    .contact button {
+        width: 100%;
+    }
+}
+
+/* Smaller Tablets and Mobile Portrait */
+@media (max-width: 480px) {
+    .header .logo {
+        font-size: 1.5em;
+    }
+
+    .hero h1 {
+        font-size: 1.5em;
+    }
+
+    .hero p {
+        font-size: 0.9em;
+    }
+
+    .about .profile-img {
+        width: 100px;
+        height: 100px
