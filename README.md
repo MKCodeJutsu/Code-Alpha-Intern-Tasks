@@ -84,7 +84,7 @@ To run these projects locally, follow the steps below:
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/code-alpha-projects.git
+   git clone https://github.com/MKCodeJutsu/code-alpha-projects.git
 
 
 ## Technologies Used
