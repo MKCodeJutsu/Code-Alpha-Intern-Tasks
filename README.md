@@ -92,7 +92,6 @@ To run these projects locally, follow the steps below:
 - **HTML5** – For structuring the web content
 - **CSS3** – For styling and layout
 - **JavaScript** – For interactivity and functionality
-- **Bootstrap** – Used in some projects for responsive design
 
 ---
 
