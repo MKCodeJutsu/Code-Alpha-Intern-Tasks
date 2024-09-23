@@ -87,7 +87,7 @@ To run these projects locally, follow the steps below:
    git clone https://github.com/MKCodeJutsu/code-alpha-projects.git
 
 
-## Technologies Use
+## Technologies Used
 
 - **HTML5** – For structuring the web content
 - **CSS3** – For styling and layout
