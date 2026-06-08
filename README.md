@@ -8,9 +8,9 @@
 </a>
 
 
-# Code Alpha Internship Projects
+# Training Projects
 
-Welcome to my GitHub repository! This collection showcases the projects I've completed during the **Code Alpha Internship**. Each project highlights my skills in web development and my commitment to building creative, functional, and interactive applications.
+Welcome to my GitHub repository! This collection showcases the projects I've completed **Training Projects **. Each project highlights my skills in web development and my commitment to building creative, functional, and interactive applications.
 
 ## Table of Contents
 
